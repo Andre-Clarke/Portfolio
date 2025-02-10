@@ -8,11 +8,14 @@ import Container from "@mui/material/Container";
 function Navbar() {
   return (
     <>
-      <AppBar position="sticky" sx={{m:-1}}>
+      <AppBar position="sticky">
         <Container maxWidth="x1">
           <Toolbar disableGutters>
             <Box>
               <p>Navbar on top baby</p>
+              <a href="/guestbook">
+                <p>Guestbook</p>
+              </a>
             </Box>
           </Toolbar>
         </Container>

@@ -1,29 +1,37 @@
-import { Route, Routes } from "react-router";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  deepPurple,
+  amber,
+  deepOrange,
+  blue,
+  lightGreen,
+} from "@mui/material/colors";
 import "./App.css";
 import GuestBook from "./components/GuestBook";
 import Home from "./components/Home";
+import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#5a5a8f",
+      main: deepPurple[300],
     },
     secondary: {
-      main: "#2bbccc",
+      main: lightGreen[300],
     },
     success: {
-      main: "#000000",
+      main: blue[200],
     },
     warning: {
-      main: "#52dac8",
+      main: deepOrange[200],
     },
     info: {
-      main: "#6b2bcc",
+      main: amber[200],
     },
     error: {
-      main: "#69cc2b",
+      main: deepOrange[600],
     },
   },
 });
@@ -33,10 +41,20 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Navbar></Navbar>
-        <h1>Hello Andre</h1>
         <Routes>
-          <Route path="/" id="home" element={<Home />} />
-          <Route path="/guestbook" id="guestbook" element={<GuestBook />} />
+          <Route
+            path="/"
+            id="home "
+            element={
+              <>
+                {<Home />}
+                {<AboutMe />}
+              </>
+            }
+          />
+          <Route path="/aboutme" id= ' 'element={<AboutMe />} />
+          <Route path="/guestbook" element={<GuestBook />} />
+          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
       </ThemeProvider>
     </>

@@ -1,21 +1,17 @@
-import { ClassNames } from "@emotion/react";
+import Page from "./Page";
 import React from "react";
 import "../App.css";
-import { Box, Container } from "@mui/material";
+import AboutMe from "./AboutMe";
 
 function Home() {
   return (
     <>
-      <Container sx={{ height: "100vh" }}>
-        <a href="/">
+      <Page variant="primary.dark">
+        <a href="/aboutme">
           <p>Welcome to the Home Page yo</p>
         </a>
-      </Container>
-      <Container sx={{ height: "100vh" }}>
-        <a href="/guestbook">
-          <p>This is the guest book yo</p>
-        </a>
-      </Container>
+      </Page>
+
     </>
   );
 }
