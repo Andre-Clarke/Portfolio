@@ -7,12 +7,9 @@ function Page({ children, variant }) {
         maxWidth={false}
         sx={{
           display: "flex",
-          height: "100vh",
           justifyContent: "center",
-          borderLeft: "solid",
-          borderRight: "solid",
-          borderColor:
-            variant === "primary.dark" ? "secondary.dark" : "success.dark",
+          borderBottom: "dotted",
+          textDecoration: "none",
         }}
       >
         {children}

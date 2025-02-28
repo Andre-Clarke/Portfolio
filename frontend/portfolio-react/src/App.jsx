@@ -12,6 +12,9 @@ import GuestBook from "./components/GuestBook";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const theme = createTheme({
   palette: {
@@ -49,10 +52,14 @@ function App() {
               <>
                 {<Home />}
                 {<AboutMe />}
+                {<Skills />}
+                {<Projects />}
+                {<Contact />}
+
               </>
             }
           />
-          <Route path="/aboutme" id= ' 'element={<AboutMe />} />
+          <Route path="/aboutme" id='aboutme'element={<AboutMe />} />
           <Route path="/guestbook" element={<GuestBook />} />
           <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>

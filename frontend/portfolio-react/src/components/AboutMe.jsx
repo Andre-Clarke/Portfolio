@@ -6,9 +6,9 @@ function AboutMe() {
   return (
     <>
       <Page variant="secondary.dark">
-        <a href="/">
-          <p>About Me</p>
-        </a>
+       
+          <h3>About Me</h3>
+    
       </Page>
     </>
   );
